@@ -1,0 +1,6 @@
+framework module Pods_GoogleBooksSearch {
+  umbrella header "Pods-GoogleBooksSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}

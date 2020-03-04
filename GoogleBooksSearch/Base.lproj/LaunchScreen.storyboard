@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +14,40 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="V9W-Zr-K8H">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHu-j6-8HT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleBooks" translatesAutoresizingMaskIntoConstraints="NO" id="dpv-Bp-mT7">
+                                        <rect key="frame" x="32" y="283.5" width="311" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="XBr-uV-dP3"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.6407320205479452" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dpv-Bp-mT7" firstAttribute="centerX" secondItem="HHu-j6-8HT" secondAttribute="centerX" id="D7w-Bu-C7r"/>
+                                    <constraint firstItem="dpv-Bp-mT7" firstAttribute="leading" secondItem="HHu-j6-8HT" secondAttribute="leading" constant="32" id="DYg-Eo-SuR"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpv-Bp-mT7" secondAttribute="trailing" constant="32" id="G5l-RE-m0h"/>
+                                    <constraint firstItem="dpv-Bp-mT7" firstAttribute="centerY" secondItem="HHu-j6-8HT" secondAttribute="centerY" id="yWt-gg-hEB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V9W-Zr-K8H" secondAttribute="bottom" id="63U-YK-aIB"/>
+                            <constraint firstItem="V9W-Zr-K8H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9hZ-Io-k8W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V9W-Zr-K8H" secondAttribute="trailing" id="A9h-ld-WKH"/>
+                            <constraint firstItem="HHu-j6-8HT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nzz-qh-FgE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HHu-j6-8HT" secondAttribute="bottom" id="Vf9-Ee-6MS"/>
+                            <constraint firstItem="V9W-Zr-K8H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W0I-NC-VrA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HHu-j6-8HT" secondAttribute="trailing" id="gBB-vz-JXg"/>
+                            <constraint firstItem="HHu-j6-8HT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wkQ-vK-HwJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +56,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" width="450" height="375"/>
+        <image name="googleBooks" width="1280" height="440"/>
+    </resources>
 </document>
